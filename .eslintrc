@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vitest-globals/recommended",
+    "prettier"
+  ],
+  "env": {
+    "node": true,
+    "vitest-globals/env": true
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "@typescript-eslint/naming-convention": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts"
+        ]
+      }
+    ],
+    "class-methods-use-this": "off"
+  }
+}
