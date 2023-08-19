@@ -15,7 +15,7 @@ type User = {
 };
 
 export default class TwitchUserApi {
-  private static BASE_URI = 'https://api.twitch.tv/helix/users';
+  private static BASE_URI = 'https://api.twitch.tv/helix/users'; // TODO: make configurable
 
   static async getUserByName(name: string) {
     const params = new URLSearchParams({
